@@ -7,30 +7,19 @@ import {
   Typography
 } from '@material-ui/core';
 import { green } from '@material-ui/core/colors';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import PeopleIcon from '@material-ui/icons/PeopleOutlined';
+import Link from '@material-ui/core/Link';
+import ExploreIcon from '@material-ui/icons/Explore';
 
 const TotalCustomers = (props) => (
   <Card {...props}>
     <CardContent>
-      <Grid
-        container
-        spacing={3}
-        sx={{ justifyContent: 'space-between' }}
-      >
+      <Grid container spacing={3} sx={{ justifyContent: 'space-between' }}>
         <Grid item>
-          <Typography
-            color="textSecondary"
-            gutterBottom
-            variant="h6"
-          >
-            TOTAL CUSTOMERS
+          <Typography color="textSecondary" gutterBottom variant="h6">
+            CURRENT LOCATION
           </Typography>
-          <Typography
-            color="textPrimary"
-            variant="h3"
-          >
-            1,600
+          <Typography color="textPrimary" variant="h3">
+            Austin, TX
           </Typography>
         </Grid>
         <Grid item>
@@ -41,7 +30,7 @@ const TotalCustomers = (props) => (
               width: 56
             }}
           >
-            <PeopleIcon />
+            <ExploreIcon />
           </Avatar>
         </Grid>
       </Grid>
@@ -49,24 +38,14 @@ const TotalCustomers = (props) => (
         sx={{
           alignItems: 'center',
           display: 'flex',
-          pt: 2
+          pt: 3
         }}
       >
-        <ArrowUpwardIcon sx={{ color: green[900] }} />
-        <Typography
-          variant="body2"
-          sx={{
-            color: green[900],
-            mr: 1
-          }}
-        >
-          16%
-        </Typography>
-        <Typography
-          color="textSecondary"
-          variant="caption"
-        >
-          Since last month
+        <Typography color="textSecondary" variant="caption">
+          {/* Since last month */}
+          <Link href="#" color="textSecondary">
+            Change Location
+          </Link>
         </Typography>
       </Box>
     </CardContent>

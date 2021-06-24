@@ -7,33 +7,20 @@ import {
   Typography
 } from '@material-ui/core';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import MoneyIcon from '@material-ui/icons/Money';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+// import MoneyIcon from '@material-ui/icons/Money';
 import { red } from '@material-ui/core/colors';
 
-const Budget = (props) => (
-  <Card
-    sx={{ height: '100%' }}
-    {...props}
-  >
+const AvgPriceOfHomes = (props) => (
+  <Card sx={{ height: '100%' }} {...props}>
     <CardContent>
-      <Grid
-        container
-        spacing={3}
-        sx={{ justifyContent: 'space-between' }}
-      >
+      <Grid container spacing={3} sx={{ justifyContent: 'space-between' }}>
         <Grid item>
-          <Typography
-            color="textSecondary"
-            gutterBottom
-            variant="h6"
-          >
-            BUDGET
+          <Typography color="textSecondary" gutterBottom variant="h6">
+            AVERAGE PRICE OF HOMES
           </Typography>
-          <Typography
-            color="textPrimary"
-            variant="h3"
-          >
-            $24,000
+          <Typography color="textPrimary" variant="h3">
+            $347,230
           </Typography>
         </Grid>
         <Grid item>
@@ -44,7 +31,8 @@ const Budget = (props) => (
               width: 56
             }}
           >
-            <MoneyIcon />
+            {/* <MoneyIcon /> */}
+            <AttachMoneyIcon />
           </Avatar>
         </Grid>
       </Grid>
@@ -56,6 +44,7 @@ const Budget = (props) => (
         }}
       >
         <ArrowDownwardIcon sx={{ color: red[900] }} />
+
         <Typography
           sx={{
             color: red[900],
@@ -65,10 +54,7 @@ const Budget = (props) => (
         >
           12%
         </Typography>
-        <Typography
-          color="textSecondary"
-          variant="caption"
-        >
+        <Typography color="textSecondary" variant="caption">
           Since last month
         </Typography>
       </Box>
@@ -76,4 +62,4 @@ const Budget = (props) => (
   </Card>
 );
 
-export default Budget;
+export default AvgPriceOfHomes;

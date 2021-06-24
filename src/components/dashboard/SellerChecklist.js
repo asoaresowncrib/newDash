@@ -18,49 +18,76 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 const products = [
   {
     id: uuid(),
-    name: 'Dropbox',
-    imageUrl: '/static/images/products/product_1.png',
+    name: 'Complete Profile',
+    imageUrl: '/static/images/products/undone.png',
     updatedAt: moment().subtract(2, 'hours')
   },
   {
     id: uuid(),
-    name: 'Medium Corporation',
-    imageUrl: '/static/images/products/product_2.png',
+    name: 'Watch Seller Video',
+    imageUrl: '/static/images/products/undone.png',
     updatedAt: moment().subtract(2, 'hours')
   },
   {
     id: uuid(),
-    name: 'Slack',
-    imageUrl: '/static/images/products/product_3.png',
+    name: 'Payment is Recieved',
+    imageUrl: '/static/images/products/undone.png',
     updatedAt: moment().subtract(3, 'hours')
   },
   {
     id: uuid(),
-    name: 'Lyft',
-    imageUrl: '/static/images/products/product_4.png',
+    name: 'Showings',
+    imageUrl: '/static/images/products/undone.png',
     updatedAt: moment().subtract(5, 'hours')
   },
   {
     id: uuid(),
-    name: 'GitHub',
-    imageUrl: '/static/images/products/product_5.png',
+    name: 'Review/Accept Offer',
+    imageUrl: '/static/images/products/undone.png',
+    updatedAt: moment().subtract(9, 'hours')
+  },
+  {
+    id: uuid(),
+    name: 'Appraisal',
+    imageUrl: '/static/images/products/undone.png',
+    updatedAt: moment().subtract(9, 'hours')
+  },
+  {
+    id: uuid(),
+    name: 'Inspection',
+    imageUrl: '/static/images/products/undone.png',
+    updatedAt: moment().subtract(9, 'hours')
+  },
+  {
+    id: uuid(),
+    name: 'Extention Addendum',
+    imageUrl: '/static/images/products/undone.png',
+    updatedAt: moment().subtract(9, 'hours')
+  },
+  {
+    id: uuid(),
+    name: 'Select Closing Agency',
+    imageUrl: '/static/images/products/undone.png',
+    updatedAt: moment().subtract(9, 'hours')
+  },
+  {
+    id: uuid(),
+    name: 'Closing',
+    imageUrl: '/static/images/products/undone.png',
     updatedAt: moment().subtract(9, 'hours')
   }
 ];
 
-const LatestProducts = (props) => (
+const SellerChecklist = (props) => (
   <Card {...props}>
     <CardHeader
       subtitle={`${products.length} in total`}
-      title="Latest Products"
+      title="Seller Checklist"
     />
     <Divider />
     <List>
       {products.map((product, i) => (
-        <ListItem
-          divider={i < products.length - 1}
-          key={product.id}
-        >
+        <ListItem divider={i < products.length - 1} key={product.id}>
           <ListItemAvatar>
             <img
               alt={product.name}
@@ -75,10 +102,7 @@ const LatestProducts = (props) => (
             primary={product.name}
             secondary={`Updated ${product.updatedAt.fromNow()}`}
           />
-          <IconButton
-            edge="end"
-            size="small"
-          >
+          <IconButton edge="end" size="small">
             <MoreVertIcon />
           </IconButton>
         </ListItem>
@@ -104,4 +128,4 @@ const LatestProducts = (props) => (
   </Card>
 );
 
-export default LatestProducts;
+export default SellerChecklist;
