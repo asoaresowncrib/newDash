@@ -50,6 +50,7 @@ const NumLocalListings = (props) => {
                     />
                     <CardContent>
                       <Typography>Hello</Typography>
+                      <h1>Hello World</h1>
                     </CardContent>
                   </CardActionArea>
                 </Card>
